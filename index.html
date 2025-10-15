@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conversor PDF a Base64</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <header>
+      <h1>Conversor de PDF a Base64</h1>
+      <p>Sube un archivo PDF y obtén su contenido codificado en Base64 listo para copiar.</p>
+    </header>
+
+    <section class="panel panel-carga">
+      <label for="archivo" class="campo-archivo">
+        <span>Seleccionar archivo PDF</span>
+        <input type="file" id="archivo" accept="application/pdf" />
+      </label>
+      <button id="btnConvertir" class="btn" disabled>Convertir a Base64</button>
+      <p id="nombreArchivo" class="nombre-archivo">Ningún archivo seleccionado.</p>
+      <p id="mensajeEstado" class="mensaje-estado" aria-live="polite"></p>
+    </section>
+
+    <section class="panel panel-resultado" aria-live="polite">
+      <div class="panel-resultado__cabecera">
+        <h2>Resultado</h2>
+        <div class="acciones">
+          <button id="btnCopiar" class="btn" disabled>Copiar</button>
+          <button id="btnDescargar" class="btn" disabled>Descargar</button>
+        </div>
+      </div>
+      <textarea id="resultado" readonly placeholder="El contenido en Base64 aparecerá aquí"></textarea>
+    </section>
+
+    <footer>
+      <p>Todo el procesamiento ocurre en tu navegador. El archivo no se envía a ningún servidor.</p>
+    </footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
