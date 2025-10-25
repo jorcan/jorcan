@@ -1,0 +1,12 @@
+node_modules
+.DS_Store
+dist
+.env
+.env.local
+server/node_modules
+server/videos
+server/.env
+server/.env.local
+.idea
+.vscode
+npm-debug.log*
